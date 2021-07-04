@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html id="image">
+
+<center>
+<head>
+  <title>control page</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <h2 class="header">Welcome to the directions</br>control page for base</h2>
+
+    <table>
+      <tbody>
+
+        <form action="forward.php">
+          <tr class="forward-arrow">
+              <td><input type="submit" value="forward" class="submit1"></td>        
+            </tr>
+          </form>
+
+        <form action="left.php">
+        <tr class="left-arrow">
+          <td><input type="submit" value="left" class="submit1"></td>        
+        </tr>
+       </form>
+
+          <form action="stop.php">
+          <tr class="stopp">
+            <td><input type="submit" value="stop"  class="submit2"></td>        
+          </tr>
+      </form>
+
+          <form action="right.php">
+          <tr class="right-arrow">
+               <td><input type="submit" value="right" class="submit1"></td>        
+           </tr>
+      </form>
+
+           <form action="backward.php">
+          <tr class="backward-arrow">
+            <td><input type="submit" value="backward"  class="submit1"></td>        
+          </tr>
+        </form>
+        
+      </tbody>
+    </table>
+
+
+    <script>
+      window.watsonAssistantChatOptions = {
+          integrationID: "6f85dff4-07d9-48bd-b4bf-e690697b95b3", // The ID of this integration.
+          region: "eu-gb", // The region your integration is hosted in.
+          serviceInstanceID: "d2f4feee-190e-49b8-982d-af11911266ae", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</body>
+</center>
+</html>
